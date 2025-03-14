@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>d.doub</title>
+    <title>Travel</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* 기본 스타일 설정 */
         body { 
             margin: 0; 
             height: 100vh; 
             overflow: hidden; 
+            background-color: #ffffff; 
+            font-family: 'Noto Sans KR', sans-serif; 
         }
 
-        /* 이미지 스타일 */
         .image-container {
             width: 100vw; 
             height: 100vh; 
@@ -21,38 +21,30 @@
             position: relative; 
         }
 
-        .image-container img {
-            width: 100%; 
-            height: auto; 
-            min-height: 100%; 
-            object-fit: cover; 
-        }
-
-        /* 버튼 스타일 */
         .button {
             position: absolute; 
             top: 30px; 
             left: 30px; 
-            color: rgba(255, 255, 255, 1); 
+            color: rgba(0, 0, 0, 1); 
             font-size: 2em; 
             font-weight: 700; 
-            font-family: 'Noto Sans KR', sans-serif; 
             cursor: pointer; 
             border: none; 
             background: none; 
             z-index: 1; 
+            font-family: 'Noto Sans KR', sans-serif; 
         }
 
         .small-button {
-            color: rgba(255, 255, 255, 1); 
+            color: rgba(0, 0, 0, 1); 
             font-size: 0.9em; 
             font-weight: 400; 
-            font-family: 'Noto Sans KR', sans-serif; 
             cursor: pointer; 
             border: none; 
             background: none; 
             display: block; 
             margin-top: 7px; 
+            font-family: 'Noto Sans KR', sans-serif; 
         }
 
         .button-container {
@@ -62,9 +54,8 @@
         }
     </style>
     <script>
-        // 각 버튼에 대한 기능 정의
         function handleDDoubClick() {
-            console.log("d.doub 버튼이 클릭되었습니다!");
+            window.location.href = 'index.html'; // 메인 페이지로 이동
         }
 
         function handleLandscapeClick() {
@@ -90,7 +81,6 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="images/사진.jpg" alt="내 사진">
         <button class="button" onclick="handleDDoubClick()">d.doub</button>
         <div class="button-container">
             <button class="small-button" onclick="handleLandscapeClick()">Landscape</button>
