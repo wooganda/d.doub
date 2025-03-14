@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; 
+            height: 100vh; 
+            overflow: hidden; 
+            background-color: #ffffff; 
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
+
+        .image-container {
+            width: 100vw; 
+            height: 100vh; 
+            overflow: hidden; 
+            position: relative; 
+        }
+
+        .button {
+            position: absolute; 
+            top: 30px; 
+            left: 30px; 
+            color: rgba(0, 0, 0, 1); 
+            font-size: 2em; 
+            font-weight: 700; 
+            cursor: pointer; 
+            border: none; 
+            background: none; 
+            z-index: 1; 
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
+
+        .small-button {
+            color: rgba(0, 0, 0, 1); 
+            font-size: 0.9em; 
+            font-weight: 400; 
+            cursor: pointer; 
+            border: none; 
+            background: none; 
+            display: block; 
+            margin-top: 7px; 
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
+
+        .button-container {
+            position: absolute; 
+            top: 120px; 
+            left: 30px; 
+        }
+
+        .text-area {
+            position: absolute;
+            top: 100px; /* 텍스트 영역의 수직 위치 조정 */
+            left: 230px; /* 텍스트 영역의 수평 위치 조정 */
+            text-align: left; /* 텍스트 왼쪽 정렬 */
+            font-size: 0.9em; /* 글씨 크기 */
+            font-weight: 100; /* 글씨 두께 */
+            width: 80%; /* 너비 설정 */
+            padding: 20px; /* 안쪽 여백 */
+            line-height: 15px; /* 줄 간격 조정 (기본값보다 작게 설정) */
+            font-family: '돋움', sans-serif; /* 폰트를 돋움으로 설정 */
+        }
+    </style>
+    <script>
+        function handleDDoubClick() {
+            window.location.href = 'index.html'; // 메인 페이지로 이동
+        }
+
+        function handleLandscapeClick() {
+            window.location.href = 'landscape.html'; // Landscape 페이지로 이동
+        }
+
+        function handleFoodClick() {
+            window.location.href = 'food.html'; // Food 페이지로 이동
+        }
+
+        function handleTravelClick() {
+            window.location.href = 'travel.html'; // Travel 페이지로 이동
+        }
+
+        function handleAboutClick() {
+            window.location.href = 'about.html'; // About 페이지로 이동
+        }
+
+        function handleContactClick() {
+            window.location.href = 'contact.html'; // Contact 페이지로 이동
+        }
+    </script>
+</head>
+<body>
+    <div class="image-container">
+        <button class="button" onclick="handleDDoubClick()">d.doub</button>
+        <div class="button-container">
+            <button class="small-button" onclick="handleLandscapeClick()">Landscape</button>
+            <button class="small-button" onclick="handleFoodClick()">Food</button>
+            <button class="small-button" onclick="handleTravelClick()">Travel</button>
+            <button class="small-button" onclick="handleAboutClick()">About</button>
+            <button class="small-button" onclick="handleContactClick()">Contact</button>
+        </div>
+        <div class="text-area">
+            <p>drnrn123@naver.com</p>
+            <p>instagram@sabai.archive</p>
+        </div>
+    </div>
+</body>
+</html>
