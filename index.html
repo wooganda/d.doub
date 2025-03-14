@@ -4,19 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사진 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .gallery { display: flex; flex-wrap: wrap; }
-        .gallery img { margin: 5px; max-width: 200px; }
+        /* 기본 스타일 설정 */
+        body { 
+            margin: 0; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        /* 이미지 스타일 */
+        .image-container {
+            width: 100vw; 
+            height: 100vh; 
+            overflow: hidden; 
+            position: relative; 
+        }
+
+        .image-container img {
+            width: 100%; 
+            height: auto; 
+            min-height: 100%; 
+            object-fit: cover; 
+        }
+
+        /* 버튼 스타일 */
+        .button {
+            position: absolute; 
+            top: 30px; 
+            left: 30px; 
+            color: rgba(255, 255, 255, 1); 
+            font-size: 2em; 
+            font-weight: 700; 
+            font-family: 'Noto Sans KR', sans-serif; 
+            cursor: pointer; 
+            border: none; 
+            background: none; 
+            z-index: 1; 
+        }
+
+        .small-button {
+            color: rgba(255, 255, 255, 0.8); 
+            font-size: 0.9em; 
+            font-weight: 400; 
+            font-family: 'Noto Sans KR', sans-serif; 
+            cursor: pointer; 
+            border: none; 
+            background: none; 
+            display: block; 
+            margin-top: 7px; 
+        }
+
+        .button-container {
+            position: absolute; 
+            top: 120px; 
+            left: 30px; 
+        }
     </style>
+    <script>
+        // 각 버튼에 대한 기능 정의
+        function handleDDoubClick() {
+            console.log("d.doub 버튼이 클릭되었습니다!");
+        }
+
+        function handleLandscapeClick() {
+            console.log("Landscape 버튼이 클릭되었습니다!");
+        }
+
+        function handleFoodClick() {
+            console.log("Food 버튼이 클릭되었습니다!");
+        }
+
+        function handleTravelClick() {
+            console.log("Travel 버튼이 클릭되었습니다!");
+        }
+
+        function handleAboutClick() {
+            console.log("About 버튼이 클릭되었습니다!");
+        }
+
+        function handleContactClick() {
+            console.log("Contact 버튼이 클릭되었습니다!");
+        }
+    </script>
 </head>
 <body>
-    <h1>나의 사진 포트폴리오</h1>
-    <div class="gallery">
-        <img src="사진1.jpg" alt="사진 1">
-        <img src="사진2.jpg" alt="사진 2">
-        <img src="사진3.jpg" alt="사진 3">
-        <!-- 더 많은 사진 추가 -->
+    <div class="image-container">
+        <img src="images/사진.jpg" alt="내 사진">
+        <button class="button" onclick="handleDDoubClick()">d.doub</button>
+        <div class="button-container">
+            <button class="small-button" onclick="handleLandscapeClick()">Landscape</button>
+            <button class="small-button" onclick="handleFoodClick()">Food</button>
+            <button class="small-button" onclick="handleTravelClick()">Travel</button>
+            <button class="small-button" onclick="handleAboutClick()">About</button>
+            <button class="small-button" onclick="handleContactClick()">Contact</button>
+        </div>
     </div>
 </body>
 </html>
